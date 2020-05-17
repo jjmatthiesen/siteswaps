@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    </head>
+
+    <body>
+        <div class="page w-full xl:w-8/12 m-auto bg-white xl:mt-4 xl:mb-4">
+            <h2 class="pb-8 pt-24 sm:pt-32 xl:pt-40 text-4xl pr-6 pl-6 sm:pl-6 sm:pr-6 md:pl-40 md:pr-40">Jonglieren mit Zahlen</h2>
+            <h4 class="text-xl"> Jennifer Matthiesen </h4>
+            <h4 class="text-xl pb-8 xl:pb-12"> Mai 2020 </h4>
+            <div class="pb-5 sm:pb-20 xl:pb-32">
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 md:pl-40 md:pr-40">
+                    Damit Jongleure sich untereinander verständigen können und Tricks austauschen können, werden sogenannte Siteswaps genutzt. 
+                    Bei der Siteswap-Notation werden Jonglierticks als eine Sequenz von Nummer dargestellt, wobei jede Nummer das Zeitintervall des jeweiligen Wurfes repräsentiert. 
+                    Das klingt jetzt erst einmal komplizierter als man denkt. 
+                    Schauen wir uns das ganze einmal an einem Beispiel an: 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-2 md:pl-40 md:pr-40">
+                    Zunächst einmal schauen wir uns die „normale“ Jonglage mit drei Bällen an, die sogenannte Kaskade:
+                </p>
+                <img  class="object-center animated-gif" src="images/siteswap_333.gif">
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-2 md:pl-40 md:pr-40">
+                    Folgen wir nur dem blauen Ball, sehen wir, dass nachdem dieser geworfen wurde zwei weitere Bälle fliegen, bevor wieder der blaue Ball geworfen wird. 
+                    Sprich, der blaue Ball wird losgeworfen, auf Takt 1 und 2 fliegen die anderen beiden Bälle, bevor in Takt 3 wieder der blaue Ball geworfen wird. 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-2 md:pl-40 md:pr-40">
+                    Wir werfen also: Blau, rot, grün, blau, rot, grün… 
+                </p>
+        
+
+                <div class="table pb-2 pt-2 m-auto">
+                    <div class="text-xs sm:text-sm"> 
+                        <table class="beats">
+                            <tr>
+                                <td class="text-left border-r border-black w-12">Takte</td>
+                                <td class="w-10">0</td>
+                                <td class="w-10">1</td>
+                                <td class="w-10">2</td>
+                                <td class="w-10">3</td>
+                            </tr>
+                            <tr class="border-b border-black">
+                                <td class="text-left border-r border-black">Ball</td>
+                                <td>🔵</td>
+                                <td>🔴</td>
+                                <td>🟢</td>
+                                <td>🔵</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Es vergehen also 3 Takte bis der blaue Ball landet bzw. wieder losgeworfen werden kann. 
+                    Daher nennen wir diesen Wurf eine 3 (oder im englischen auch 3-throw). 
+                    Es sehr beliebte Darstellung unter Jongleure ist die Ansicht von Oben auf das Muster. 
+                    Stellt euch vor, euch würde eine Kamera von der oben filmen, 
+                    während Ihr beim Jonglieren durch den Raum geht. Die obere Reihe an Punkten stellt dann die Linke und die untere Reihe die rechte Hand dar:
+                </p>
+                //todo ladder diagramm
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-2 md:pl-40 md:pr-40"> 
+                    In der Kaskade mit drei Bällen werden alle Würfe gleich geworfen. Wir können daher dieses Wurfmuster als 333 repräsentieren. 
+                    Das alle Zahlen für alle Würfe die Gleiche ist, kann der Siteswap auch als 3 abgekürzt werden. 
+                    Und da ist auch schon unser erster Siteswap! :) War gar nicht so schwer, oder? 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 md:pl-40 md:pr-40">
+                    Gleiches gilt natürlich auch für die Jonglage mit 4, 5 oder 6 Bällen. 
+                    Nur das hier, deutlich mehr Zeit vergeht, bis der Initialball wieder geworden wird. 
+                    Bei 4 Bällen vergehen hierbei fünf Takte, bei 5 fünf Takte usw.. 
+                    Sprich die 5-Ball Kaskade würde in der Siteswap-Notation als 5 dargestellt werden. 
+                    Hierbei fliegen ungerade Würfe immer zur anderen Hand, während gerade Würfe wieder in der gleichen Hand landen. Erstmal recht einleuchtend, oder? Dann kann der richte Spaß ja beginnen! 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Verschiedene Würfe lassen sich nämlich kombinieren. 
+                    So z.B. wie im Siteswap 423. Hier wird der erste Ball, wie in einem 4-Ball Muster geworfen, 
+                    darauf folgt eine 2 - Moment! Eine 2? Ja genau, eine 2. Eine 2 wir wie eine 4 jongliert, nur niedriger. 
+                    Da diese so niedrig ist, dass kein anderer Ball aus der Hand in der Zeit dazwischen geworfen werden kann, tricksen die meisten Jongleure hier und werfen den Ball erst gar nicht. 
+                    Er wird also ganz einfach in der Hand gehalten. 
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Das Muster würde dann wie folgt aussehen:
+                </p>
+                <img  class="object-center animated-gif" src="images/423_200.gif">
+            
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Eine weitere Eigenschaft von Siteswaps ist es, dass ihr anhand einer Zahlenreihenfolge sehen könnt, wie viele Bälle benötigt werde. Hierfür addiert ihr alle zahlen der Sequenz und dividiert sie durch die Anzahl den der Stellen (der Durchschnitt). 
+                    Das Ergebnis ist dann die Anzahl an Bällen, die ihr für das Muster braucht. 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    $$ 4 + 2 + 3 = 9 $$
+                    $$\frac{9}{3} = 3$$
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    423 ist also ein 3-Ball Trick. Versucht es einmal, es ist gar nicht so schwer ;)
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-10 pb-4 md:pl-40 md:pr-40">
+                    Klappt? Dann versucht euch doch mal an 531 oder 441!
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40 float-right">
+                    <a href="passing_423_DE.html"> weiter &#8594;</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

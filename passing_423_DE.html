@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    </head>
+
+    <body>
+        <div class="page w-full xl:w-8/12 m-auto bg-white xl:mt-4 xl:mb-4">
+            <h2 class="pb-8 pt-24 sm:pt-32 xl:pt-40 text-4xl pr-6 pl-6 sm:pl-6 sm:pr-6 md:pl-40 md:pr-40">Happy 423 Day: Ein 423-änliches Passing-Muster</h2>
+            <h4 class="text-xl"> Jennifer Matthiesen </h4>
+            <h4 class="text-xl pb-8 xl:pb-12"> Mai 2020 </h4>
+            <div class="pb-5 sm:pb-20 xl:pb-32">
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 md:pl-40 md:pr-40">
+                    Jonglieren macht Spaß. 
+                    Jonglieren mit Zahlen noch viel mehr. 
+                    Die Siteswap-Notation, welche weit verbreitet unter Jongleuren ist, beschreibt Jongliermuster als eine Zahlensequenz. 
+                    In dieser Notation repräsentieren Zahlen das Zeitintervall, angegeben in Takten. Sequenzen begegnen uns tagtäglich. 
+                    So kommt es, dass z.B. das Datum des 23. Aprils (englisch: April 23<sup>rd</sup> oder auch 4 23) jonglierbar ist. 
+                    Jongliert sieht es wie folgt aus:
+                </p>
+                <img  class="object-center animated-gif" src="images/423_200.gif">
+                <p>
+                </p>
+        
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-2 md:pl-40 md:pr-40">
+                    Aber wenn wir nun nicht allein Jonglieren wollen? 
+                    Können wir dieses Muster in ein Passing-Muster transformieren? 
+                    Und ob! 
+                    Jedoch wollen wir das Ursprungsmuster, welches mit 3 Gegenständen geworfen werden nicht zwischen 2 Jongleuren aufteilen, sondern vielmehr das 423-Gefühl beibehalten und dieses mit Passing kombinieren. 
+                    Hierfür behalten wir die 4 und die 2 für jeden Jongleur bei und betrachten die 3 als so genannten globalen Wurf. 
+                    Die 3 wird zwischen den beiden Jongleuren „aufgeteilt“, sprich bei zwei Jongleuren durch zwei geteilt. 
+                    Jongleur \(A\) wirft damit die Sequenz 4 2 1.5, wobei alle 1.5 Würfe cross-Würfe sind. 
+                </p>
+                <img class="object-center h-40 pb-2" src="images/split_834.svg">
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Ein 1.5-Wurf mag nun verwirrend klingen, ist aber gar nicht so schwierig. Wenn wir allein Jonglieren geben die Zahlen die Anzahl der Takte an, die für uns vergehen, bis der Ball wieder landet. 
+                    Bei Passing-Siteswaps unterscheiden wir zwischen lokalen und globalen würden. 
+                    Lokale Siteswaps sind wie die Siteswaps für die Einzeljonlage zu betrachten. 
+                    In einem Passing-Muster werfen nun aber auch die anderen Jongleure Gegenstände. 
+                    Betrachten wir auch die Takte der anderen Passer, so sprechen wir von einem globalen Muster. 
+                </p>
+                <div class="table pb-2 pt-2 m-auto">
+                    <div class="text-xs sm:text-sm"> 
+                        <table class="beats">
+                            <tr class="border-b border-t border-black">
+                                <td></td>
+                                <td colspan="6">
+                                    Beats
+                                </td>
+                            </tr>
+                            <tr class="border-b border-black">
+                                <td class="w-24"></td>
+                                <td class="w-8">1</td>
+                                <td class="w-8">1.5</td>
+                                <td class="w-8">2</td>
+                                <td class="w-8">2.5</td>
+                                <td class="w-8">3</td>
+                                <td class="w-8">3.5</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left border-r border-black">Juggler A</td>
+                                <td>\(4\)</td>
+                                <td></td>
+                                <td>\(2\)</td>
+                                <td></td>
+                                <td>\(1.5_\times\)</td>
+                                <td></td>
+                            </tr>
+                            <tr class="border-b border-black">
+                                <td class="text-left border-r border-black">Juggler B</td>
+                                <td></td>
+                                <td>\(1.5_{||}\)</td>
+                                <td></td>
+                                <td>\(4\)</td>
+                                <td></td>
+                                <td>\(2\)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Eine lokale 4 wird so zu einem globalen 8 und eine lokale 2 zu einer globalen 4. 
+                    Jongleur \(A\) würde also global betrachtet die Sequenz 843 werfen, was lokal zur Sequenz 4 2 1.5 wird. 
+                    Schauen wir und das Leiterdiagramm an, wird dieses ein wenig klarer:
+                </p>
+                <img class="ladder-834 object-center pr-6 pl-6 w-full pt-2 pb-2" src="images/ladder_834.svg">
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-2 md:pl-40 md:pr-40"> 
+                    An 8-throw will land on \(A\) juggler's hand after 8 beats, when we take the actions of both jugglers into account.
+                    However, considering just the actions of juggler \(A\), the object will land after 4 beats as shown in the local sequence representation above. 
+                    The mean of the pattern 834 equals 5, which will give us the number of objects needed for this pattern.
+                    Juggler \(A\) starts with 3 objects, while juggler B has 2.
+                    However, this pattern could also be juggled by just one person as shown in following animation: 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 md:pl-40 md:pr-40">
+                    Die 8 landet nach 8 Takten wieder in der Hand des gleichen Jongleurs. 
+                    Betrachten wir die Aktionen von Jongleur \(A\) allein, so landet der Wurf nach 4 Takten. Für den Werfer „füllt“ sich dieser Wurf dann wie eine 4. 
+                    Der Durchschnitt des globalen Musters 834 ergibt 5, welches die Anzahl der benötigten Gegenstände angibt. 
+                    Jongleur \(A\) startet mit drei, und Jongleur B mit zwei Gegenständen. 
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 md:pl-40 md:pr-40">
+                    Der Siteswap 834 lässt sich wiederum auch allein Jonglieren:
+                </p>
+                <img  class="object-center animated-gif2" src="images/834_color.gif">
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Die kleinste Zahl (die 3) ist hierbei äquivalent zu dem Pass-wurf in der Passing-Variante, 
+                    während die geraden Würfe (4 und 8) Self-Würfe für Jongleur \(A\) und Jongleur \(B\). 
+                    Die W-artige Form des ursprünglichen Musters bleibt erhalten.  
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Jeder valide Siteswap kann auf diese Weise in ein Passingmuster umgewandelt werden und dabei die Ursprungscharakteristik beibehalten. 
+                    Dies kann dadurch erreicht werden, indem eine bestimmte Anzahl an Würfen auf die beteiligten Jongleure aufgeteilt wird. 
+                    Das resultierende Muster kann zudem widerum als Wurfmuster für einen einzelnen Jongleur betrachtet werden, wobei die Anzahl der Objekte steigt, die Charakteristika jedoch erhalten bleiben.
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40">
+                    Versucht doch einmal selber ein paar Muster zu transformieren! ;)
+                </p>
+                <p class="pr-6 pl-6 sm:pl-6 sm:pr-6 pt-2 pb-4 md:pl-40 md:pr-40 float-right">
+                    &#8594;<a href="https://jayflyaway.github.io/423_passingPatttern/">hier geht's zum Orginalartikel</a> 
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
