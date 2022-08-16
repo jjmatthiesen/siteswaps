@@ -1,3 +1,3 @@
 # siteswaps
 juggling theory
-https://jayflyaway.github.io/siteswaps/
+https://jjmatthiesen.github.io/siteswaps/
